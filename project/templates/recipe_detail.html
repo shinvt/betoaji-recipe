@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}{{ recipe.name }}{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Recipes</a></li>
+  <li class="breadcrumb-item active">{{ recipe.name }}</li>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <nav class="navbar navbar-light bg-success rounded">
+      <span class="navbar-brand mb-0 h2 text-white"># {{recipe.name}}</span>
+    </nav>
+    <br/>
+    <div class="row">
+      <div class="col-6">
+          <img src="{{ MEDIA_URL }}/{{ recipe.image }}" class="figure-img img-fluid rounded" width="50%" height="50%" alt="{{recipe.name}}">
+      </div>
+      <div class="col-6">
+        {{recipe.description}}
+      </div>
+    </div>
+  </div>
+  <br/>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <nav class="navbar navbar-light bg-info rounded">
+          <span class="navbar-brand mb-0 h2 text-white">#  Ingredients</span>
+        </nav>
+      </div>
+      <div class="col-6">
+        <nav class="navbar navbar-light bg-danger rounded">
+          <span class="navbar-brand mb-0 h2 text-white">#  Instructions</span>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        {{recipe.ingredients}}
+      </div>
+      <div class="col-6">
+        {{recipe.instructions}}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

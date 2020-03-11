@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Create a New Recipe{% endblock %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}">
+{% endblock %}
+
+{% block javascript %}
+  <script src="{% static 'js/simplemde.min.js' %}"></script>
+  <script>
+    var simplemde_description = new SimpleMDE({ element: document.getElementsByName("description")[0] });
+    var simplemde_ingredients = new SimpleMDE({ element: document.getElementsByName("ingredients")[0] });
+    var simplemde_instructions = new SimpleMDE({ element: document.getElementsByName("instructions")[0] });
+  </script>
+{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Recipes</a></li>
+  <li class="breadcrumb-item active">New Recipe</li>
+{% endblock %}
+
+{% block content %}
+
+  <form method="post" class="mb-4" novalidate enctype="multipart/form-data">
+    {% csrf_token %}
+    {% include 'includes/form.html' %}
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>
+
+{% endblock %}
