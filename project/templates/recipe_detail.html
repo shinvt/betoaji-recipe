@@ -10,41 +10,43 @@
 {% endblock %}
 
 {% block content %}
-  <div class="container">
-    <nav class="navbar navbar-light bg-success rounded">
-      <span class="navbar-brand mb-0 h2 text-white"># {{recipe.name}}</span>
-    </nav>
-    <br/>
-    <div class="row">
-      <div class="col-6">
-          <img src="{{ MEDIA_URL }}/{{ recipe.image }}" class="figure-img img-fluid rounded" width="50%" height="50%" alt="{{recipe.name}}">
-      </div>
-      <div class="col-6">
-        {{recipe.description}}
-      </div>
+  <div class="mb-4">
+    <a href="{% url 'edit_recipe' pk=recipe.pk %}" class="btn btn-danger" role="button">Edit</a>
+  </div>
+
+  <nav class="navbar navbar-light bg-success rounded">
+    <span class="navbar-brand mb-0 h2 text-white"># {{recipe.name}}</span>
+  </nav>
+  <br/>
+  <div class="row">
+    <div class="col-6">
+        <img src="{{ MEDIA_URL }}/{{ recipe.image }}" class="figure-img img-fluid rounded" width="50%" height="50%" alt="{{recipe.name}}">
+    </div>
+    <div class="col-6">
+      {{recipe.get_description_as_markdown}}
     </div>
   </div>
+
   <br/>
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <nav class="navbar navbar-light bg-info rounded">
-          <span class="navbar-brand mb-0 h2 text-white">#  Ingredients</span>
-        </nav>
-      </div>
-      <div class="col-6">
-        <nav class="navbar navbar-light bg-danger rounded">
-          <span class="navbar-brand mb-0 h2 text-white">#  Instructions</span>
-        </nav>
-      </div>
+
+  <div class="row">
+    <div class="col-6">
+      <nav class="navbar navbar-light bg-info rounded">
+        <span class="navbar-brand mb-0 h2 text-white">#  Ingredients</span>
+      </nav>
     </div>
-    <div class="row">
-      <div class="col-6">
-        {{recipe.ingredients}}
-      </div>
-      <div class="col-6">
-        {{recipe.instructions}}
-      </div>
+    <div class="col-6">
+      <nav class="navbar navbar-light bg-danger rounded">
+        <span class="navbar-brand mb-0 h2 text-white">#  Instructions</span>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      {{recipe.get_ingredients_as_markdown}}
+    </div>
+    <div class="col-6">
+      {{recipe.get_instructions_as_markdown}}
     </div>
   </div>
 

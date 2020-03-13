@@ -8,9 +8,9 @@
 
 
 {% block content %}
-<div class="mb-4">
-  <a href="{% url 'new_recipe'%}" class="btn btn-danger" role="button">Create</a>
-</div>
+  <div class="mb-4">
+    <a href="{% url 'new_recipe'%}" class="btn btn-danger" role="button">Create</a>
+  </div>
   {% for recipe in recipes %}
   {% if forloop.counter0|divisibleby:4 %} <div class="row text-center"> {%  endif %}
   <div class="col-md-3">

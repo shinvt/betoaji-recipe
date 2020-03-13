@@ -23,6 +23,7 @@ urlpatterns = [
     re_path(r'^$', views.RecipeListView.as_view(), name='home'),
     re_path(r'^recipe/(?P<pk>\d+)/$', views.recipe_detail, name='recipe_detail'),
     re_path(r'^recipe/new/$', views.new_recipe, name='new_recipe'),
+    re_path(r'^recipe/edit/(?P<pk>\d+)/$',views.RecipeUpdateView.as_view(),name='edit_recipe'),
     path('admin/', admin.site.urls),
 ]
 

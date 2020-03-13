@@ -23,8 +23,8 @@ class Recipe(models.Model):
     def get_description_as_markdown(self):
         return mark_safe(markdown(self.description, safe_mode='escape'))
 
-    def get_material_as_markdown(self):
-        return mark_safe(markdown(self.material, safe_mode='escape'))
+    def get_ingredients_as_markdown(self):
+        return mark_safe(markdown(self.ingredients, safe_mode='escape'))
 
-    def get_methods_as_markdown(self):
-        return mark_safe(markdown(self.methods, safe_mode='escape'))
+    def get_instructions_as_markdown(self):
+        return mark_safe(markdown(self.instructions, safe_mode='escape'))

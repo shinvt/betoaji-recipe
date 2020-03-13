@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}Create a New Recipe{% endblock %}
+{% block title %}Edit Recipe{% endblock %}
 
 {% block stylesheet %}
   <link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}">
@@ -19,7 +19,8 @@
 
 {% block breadcrumb %}
   <li class="breadcrumb-item"><a href="{% url 'home' %}">Recipes</a></li>
-  <li class="breadcrumb-item active">New Recipe</li>
+  <li class="breadcrumb-item"><a href="{% url 'recipe_detail' recipe.pk %}">{{recipe.name}}</a></li>
+  <li class="breadcrumb-item active">Edit Recipe</li>
 {% endblock %}
 
 {% block content %}
@@ -27,8 +28,8 @@
   <form method="post" class="mb-4" novalidate enctype="multipart/form-data">
     {% csrf_token %}
     {% include 'includes/form.html' %}
-    <button type="submit" class="btn btn-success">Create</button>
-    <a href="{% url 'home' %}" class="btn btn-outline-secondary" role="button">Cancel</a>
+    <button type="submit" class="btn btn-success">Save Change</button>
+    <a href="{% url 'recipe_detail' recipe.pk %}" class="btn btn-outline-secondary" role="button">Cancel</a>
   </form>
 
 {% endblock %}
