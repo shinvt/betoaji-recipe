@@ -7,7 +7,7 @@ from django.core.files.storage import FileSystemStorage
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
+from django.db.models import Q
 
 def home(request):
     if request.user.is_authenticated:
@@ -22,6 +22,17 @@ class RecipeListView(ListView):
     model = Recipe
     context_object_name = 'recipes'
     template_name = 'recipes.html'
+
+    def get_queryset(self):
+        if self.request.GET.get('q'):
+            query = self.request.GET.get('q')
+            object_list = Recipe.objects.filter(
+                Q(name__icontains=query)| Q(description__icontains=query)
+            )
+        else:
+            object_list = Recipe.objects.all()
+        return object_list
+
 
 
 def recipe_detail(request, pk):
@@ -62,3 +73,12 @@ class RecipeUpdateView(UpdateView):
         recipe.updated_at = timezone.now()
         recipe.save()
         return redirect('recipe_detail', pk=recipe.pk)
+
+
+@login_required
+def filter_by_user(request):
+    recipes = get_list_or_404(Recipe)
+    object_list = Recipe.objects.filter(
+        created_by=request.user
+    )
+    return render(request, 'recipes.html', {'recipes' : object_list})

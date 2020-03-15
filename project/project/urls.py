@@ -52,6 +52,7 @@ urlpatterns = [
         name='password_change_done'),
 
     re_path(r'^recipes/$', views.RecipeListView.as_view(), name='recipes'),
+    re_path(r'^recipes/filter_by_user/$', views.filter_by_user, name='user_recipes'),
     re_path(r'^recipes/(?P<pk>\d+)/$', views.recipe_detail, name='recipe_detail'),
     re_path(r'^recipes/new/$', views.new_recipe, name='new_recipe'),
     re_path(r'^recipes/edit/(?P<pk>\d+)/$',views.RecipeUpdateView.as_view(),name='edit_recipe'),
