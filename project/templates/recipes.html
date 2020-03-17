@@ -11,9 +11,9 @@
   <!-- Search -->
   <form action="" method="get">
     <div class="input-group md-form form-sm form-2 pl-0 ">
-        <input class="form-control my-0 py-1 red-border" type="text" name="q" placeholder="Search" aria-label="Search">
+        <input class="form-control my-0 py-1 grey-border" type="text" name="q" placeholder="Search" aria-label="Search">
         <div class="input-group-append">
-          <span class="input-group-text red lighten-3" id="basic-text1">
+          <span class="input-group-text grey lighten-3" id="basic-text1">
               <i class="fa fa-search" aria-hidden="true"></i>
           </span>
         </div>
@@ -22,13 +22,13 @@
   <br/>
   <div class="row">
     <!-- Create Button -->
-    <div class="col-sm-10">
+    <div class="col-sm-8">
       <a href="{% url 'new_recipe'%}" class="btn btn-danger" role="button">Create</a>
     </div>
     <!-- Created by Me Button -->
-    <div class="col-sm-2 text-right">
-      <a href="{% url 'recipes'%}" class="btn btn-info btn-primary" role="button">All</a>
-      <a href="{% url 'user_recipes'%}" class="btn btn-info btn-secondary" role="button">Mine</a>
+    <div class="col-sm-4 text-right">
+      <a href="{% url 'recipes'%}" class="btn btn-info btn-primary" role="button"><i class="fa fa-users" aria-hidden="true"></i></a>
+      <a href="{% url 'user_recipes'%}" class="btn btn-info btn-secondary" role="button"><i class="fa fa-user" aria-hidden="true"></i></a>
     </div>
   </div>
   <br/>
@@ -37,12 +37,19 @@
   {% for recipe in recipes %}
   {% if forloop.counter0|divisibleby:4 %} <div class="row text-center"> {%  endif %}
   <div class="col-md-3">
-        <div class="card" style='width:100%; height:300px;'>
-          <img src="{{ MEDIA_URL }}/{{ recipe.image }}" style="width:100%;height:250px;" class="card-img-top" alt="{{ recipe.name }}">
+      <div class="card" style='width:100%; height:350px;'>
+          <img src="{{ MEDIA_URL }}/{{ recipe.image }}" style="width:100%;height:220px;" class="card-img-top" alt="{{ recipe.name }}">
+          <div class="card-body pt-1">
             <a href="{% url 'recipe_detail' pk=recipe.pk %}" class="card-body">
               <h5 class="card-title"> {{ recipe.name }}</h5>
             </a>
-         </div>
+            <div class="card-text" style="display:flex">
+              {% for tag in recipe.tags.all %}
+              <a href="#" class="mr-1 badge badge-info">#{{ tag }}</a>
+              {% endfor %}
+            </div>
+          </div>
+      </div>
   </div>
   {%  if forloop.counter|divisibleby:4 or forloop.last %}</div><!-- row closing --><br/>{%  endif %}
 

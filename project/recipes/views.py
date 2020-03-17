@@ -50,6 +50,8 @@ def new_recipe(request):
             recipe.updated_at = timezone.now()
             recipe.updated_by = request.user
             recipe.save()
+            # Without this next line the tags won't be saved.
+            form.save_m2m()
             return redirect('recipe_detail',pk=recipe.pk)
     else:
         form = NewRecipeForm()
@@ -58,20 +60,21 @@ def new_recipe(request):
 @method_decorator(login_required, name='dispatch')
 class RecipeUpdateView(UpdateView):
     model = Recipe
-    fields = ['description','image','ingredients','instructions']
+    fields = ['description','image','tags','ingredients','instructions']
     template_name = 'edit_recipe.html'
     pk_url_kwarg = 'pk'
     context_object_name = 'recipe'
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        return queryset.filter(created_by=self.request.user)
+        return queryset.filter()
 
     def form_valid(self, form):
         recipe = form.save(commit=False)
         recipe.updated_by = self.request.user
         recipe.updated_at = timezone.now()
         recipe.save()
+        form.save_m2m()
         return redirect('recipe_detail', pk=recipe.pk)
 
 

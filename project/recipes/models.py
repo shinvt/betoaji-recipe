@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.utils.text import Truncator
 from django.utils.html import mark_safe
 from markdown import markdown
+from taggit.managers import TaggableManager
 
 # Create your models here.
 class Recipe(models.Model):
@@ -16,6 +17,7 @@ class Recipe(models.Model):
     updated_by = models.ForeignKey(User, null=True,related_name='+', on_delete=models.CASCADE)
     ingredients = models.TextField(max_length=4000,db_column='material')
     instructions = models.TextField(max_length=4000,db_column='methods')
+    tags = TaggableManager()
 
     def __str__(self):
         return self.name
