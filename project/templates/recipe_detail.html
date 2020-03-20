@@ -10,9 +10,11 @@
 {% endblock %}
 
 {% block content %}
-  <div class="mb-4">
-    <a href="{% url 'edit_recipe' pk=recipe.pk %}" class="btn btn-danger" role="button">Edit</a>
-  </div>
+  {% if recipe.created_by == user %}
+    <div class="mb-4">
+      <a href="{% url 'edit_recipe' pk=recipe.pk %}" class="btn btn-danger" role="button">Edit</a>
+    </div>
+  {% endif %}
 
   <nav class="navbar navbar-light bg-success rounded">
     <span class="navbar-brand mb-0 h2 text-white"># {{recipe.name}}</span>
