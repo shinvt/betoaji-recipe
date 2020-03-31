@@ -40,9 +40,19 @@
       <div class="card" style='width:100%; height:350px;'>
           <img src="{{ MEDIA_URL }}/{{ recipe.image }}" style="width:100%;height:220px;" class="card-img-top" alt="{{ recipe.name }}">
           <div class="card-body pt-1">
-            <a href="{% url 'recipe_detail' pk=recipe.pk %}" class="card-body">
+            <a href="{% url 'recipe_detail' pk=recipe.pk %}" >
               <h5 class="card-title"> {{ recipe.name }}</h5>
             </a>
+
+            <div class="likebtn">
+              {% if user in recipe.likedUser.all  %}
+                <i class="fa fa-heart like-icon liked" id="like-icon_{{ recipe.pk }}" ></i>
+              {% else %}
+                <i class="fa fa-heart like-icon" id="like-icon_{{ recipe.pk }}" ></i>
+              {% endif %}
+              <p class="like-count" id="like-count_{{ recipe.pk }}"> {{recipe.like_count}}{{recipe.test}} </p>
+            </div>
+
             <div class="card-text" style="display:flex">
               {% for tag in recipe.tags.all %}
               <a href="#" class="mr-1 badge badge-info">#{{ tag }}</a>

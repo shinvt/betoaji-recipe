@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,re_path
+from django.urls import path,re_path,include
 from recipes import views
 from django.conf import settings
 from django.contrib.staticfiles.urls import static
@@ -53,6 +53,7 @@ urlpatterns = [
 
     re_path(r'^recipes/$', views.RecipeListView.as_view(), name='recipes'),
     re_path(r'^recipes/(?P<pk>\d+)/$', views.recipe_detail, name='recipe_detail'),
+    re_path(r'^recipes/(?P<pk>\d+)/like/$', views.recipe_like, name='recipe_like'),
     re_path(r'^recipes/new/$', views.new_recipe, name='new_recipe'),
     re_path(r'^recipes/filter_by_user/$', views.filter_by_user, name='user_recipes'),
     re_path(r'^recipes/edit/(?P<pk>\d+)/$',views.RecipeUpdateView.as_view(),name='edit_recipe'),
@@ -60,3 +61,10 @@ urlpatterns = [
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns

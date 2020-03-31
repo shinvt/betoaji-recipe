@@ -10,3 +10,16 @@
 .input-group.md-form.form-sm.form-2 input.red-border {
   border: 1px solid #ef9a9a;
 }
+
+.footer-betoaji{
+  position: relative;
+  bottom: 0;
+}
+
+.fa.fa-heart.like-icon.liked{
+  color: #FF0000;
+}
+
+p.like-count{
+  display: inline-block;
+}

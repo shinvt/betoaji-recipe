@@ -18,6 +18,8 @@ class Recipe(models.Model):
     ingredients = models.TextField(max_length=4000,db_column='material')
     instructions = models.TextField(max_length=4000,db_column='methods')
     tags = TaggableManager()
+    likedUser = models.ManyToManyField(User, blank=True)
+    like_count = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name

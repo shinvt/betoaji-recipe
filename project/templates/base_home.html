@@ -11,6 +11,7 @@
   </head>
   <body>
     {% block body %}
+      <header>
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
           <a class="navbar-brand" href="{% url 'home' %}">BETOAJI-RECIPES</a>
@@ -41,15 +42,19 @@
           </div>
         </div>
       </nav>
+      </header>
 
+      <main>
       <div class="container">
         {% block content %}
         {% endblock %}
       </div>
+      </main>
 
-      <footer class="page-footer font-small special-color-dark">
+      <footer style="width: 100%;position: absolute;bottom: 0">
+        <hr/>
         <div class="footer-copyright text-center py-3">
-          <p>© 2020 Copyright:BETOAJI</p>
+          <p>Copyright BETOAJI©2020</p>
         </div>
       </footer>
     {% endblock body %}

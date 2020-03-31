@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'widget_tweaks',
     'taggit',
+    'debug_toolbar',
 
 
     'accounts',
@@ -54,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'project.urls'
@@ -142,3 +144,5 @@ LOGIN_REDIRECT_URL  = 'home'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 LOGIN_URL = 'login'
+
+INTERNAL_IPS = ['127.0.0.1']
