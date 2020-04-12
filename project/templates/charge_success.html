@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Donate successful{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'donation' %}">Donation</a></li>
+  <li class="breadcrumb-item active">Success</li>
+{% endblock %}
+
+{% block content %}
+  <div class="alert alert-success" role="alert">
+    <strong>Success!</strong> Thank for your donation!
+  </div>
+  <a href="{% url 'donation' %}" class="btn btn-secondary">Return to donation page</a>
+{% endblock %}

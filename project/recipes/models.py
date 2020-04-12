@@ -13,7 +13,7 @@ class Recipe(models.Model):
     image = models.FileField(upload_to='cusine/')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(null=True)
-    created_by = models.ForeignKey(User, related_name='recipes', on_delete=models.CASCADE)
+    created_by = models.ForeignKey(User, related_name='recipes_creator', on_delete=models.CASCADE)
     updated_by = models.ForeignKey(User, null=True,related_name='+', on_delete=models.CASCADE)
     ingredients = models.TextField(max_length=4000,db_column='material')
     instructions = models.TextField(max_length=4000,db_column='methods')

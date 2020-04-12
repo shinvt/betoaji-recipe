@@ -20,6 +20,7 @@ from django.conf import settings
 from django.contrib.staticfiles.urls import static
 from django.contrib.auth import views as auth_views
 from accounts import views as accounts_views
+from donate import views as donate_views
 
 
 urlpatterns = [
@@ -57,6 +58,12 @@ urlpatterns = [
     re_path(r'^recipes/new/$', views.new_recipe, name='new_recipe'),
     re_path(r'^recipes/filter_by_user/$', views.filter_by_user, name='user_recipes'),
     re_path(r'^recipes/edit/(?P<pk>\d+)/$',views.RecipeUpdateView.as_view(),name='edit_recipe'),
+
+    re_path(r'^donation/$', donate_views.donation, name='donation'),
+    re_path(r'^donation/update_chart$', donate_views.update_chart, name='donation_chart'),
+    re_path(r'^donation/charge$', donate_views.charge, name='charge'),
+    re_path(r'^donation/success$',  donate_views.charge_success, name='charge_success'),
+
     path('admin/', admin.site.urls),
 ]
 

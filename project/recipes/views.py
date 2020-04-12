@@ -9,6 +9,10 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from django.http import JsonResponse
+import logging
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 def home(request):
 	if request.user.is_authenticated:

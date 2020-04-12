@@ -1,8 +1,5 @@
-
+// -----------------Like Button----------------------
 var btnClassClick = function(e){
-    //alert("Button clicked from class: "+e.currentTarget.id);
-    //$(e.currentTarget).css("color", "red");
-
     var recipeID = e.currentTarget.id.split("_")[1];
     $.ajax({
         url: '/recipes/'+recipeID+'/like/',
@@ -11,11 +8,9 @@ var btnClassClick = function(e){
           var like_status = data;
     			if (like_status.Success == "True") {
       			$(e.currentTarget).css("color", "red");
-            console.log(like_status.count)
       			$('#like-count' + '_' + recipeID).text(like_status.count);
     			} else if (like_status.Removed == "True") {
             $(e.currentTarget).css("color", "black");
-            console.log(like_status.count)
       			$('#like-count' + '_' + recipeID).text(like_status.count);
           }
         },
@@ -25,26 +20,134 @@ var btnClassClick = function(e){
     });
 }
 
-$('.fa-heart').on('click', btnClassClick);
+$('.like-icon').on('click', btnClassClick);
 
-// $('a[id^=itemLike]').on("click", function(e) { // catch the form's submit event
-// 	e.preventDefault();
-// 	var aId = $(this).attr('id');
-// 	var itemID = aId.substring(8);
-// 	$.ajax({
-// 		url:'/product/'+itemID+'/',
-// 		success: function(data) { // on success..
-			// var rating_status = jQuery.parseJSON(data);
-			// if (rating_status.Success == "True") {
-			// $('a').find('#heart-icon' + itemID).removeClass('fa-heart-o text-not-liked').addClass('fa-heart text-liked');
-			// $('#like-count' + itemID).html(rating_status.count);
-			// } else if (rating_status.Removed == "True") {
-			// $('a').find('#heart-icon' + itemID).removeClass('fa-heart text-liked').addClass('fa-heart-o text-not-liked');
-			// $('#like-count' + itemID).html(rating_status.count);
-// 			}
-// 		},/* end of success */
-// 		error: function(data) {
-// 			setTimeout(function() {$('#errorModal').modal({backdrop:'static', keyboard:false,show:true});}, 1000);
-// 		}/*  end of error */
-// 	});/* end of ajax */
-// });/* end of onclick*/
+// -----------------Donation----------------------
+// Create a Stripe client.
+var stripe = Stripe('pk_test_7jQjbysQY8LT2ObxAOTiI40B001vsRQY7P');
+
+// Create an instance of Elements.
+var elements = stripe.elements();
+
+// Custom styling can be passed to options when creating an Element.
+// (Note that this demo uses a wider set of styles than the guide below.)
+var style = {
+  base: {
+    color: '#32325d',
+    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+    fontSmoothing: 'antialiased',
+    fontSize: '16px',
+    '::placeholder': {
+      color: '#aab7c4'
+    }
+  },
+  invalid: {
+    color: '#fa755a',
+    iconColor: '#fa755a'
+  }
+};
+
+// Create an instance of the card Element.
+var card = elements.create('card', {style: style});
+
+// Add an instance of the card Element into the `card-element` <div>.
+card.mount('#card-element');
+
+// Handle real-time validation errors from the card Element.
+card.addEventListener('change', function(event) {
+  var displayError = document.getElementById('card-errors');
+  if (event.error) {
+    displayError.textContent = event.error.message;
+  } else {
+    displayError.textContent = '';
+  }
+});
+
+// Handle form submission.
+var form = document.getElementById('payment-form');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  stripe.createToken(card).then(function(result) {
+    if (result.error) {
+      // Inform the user if there was an error.
+      var errorElement = document.getElementById('card-errors');
+      errorElement.textContent = result.error.message;
+    } else {
+      // Send the token to your server.
+      stripeTokenHandler(result.token);
+    }
+  });
+});
+
+// Submit the form with the token ID.
+function stripeTokenHandler(token) {
+  // Insert the token ID into the form so it gets submitted to the server
+  var form = document.getElementById('payment-form');
+  var hiddenInput = document.createElement('input');
+  hiddenInput.setAttribute('type', 'hidden');
+  hiddenInput.setAttribute('name', 'stripeToken');
+  hiddenInput.setAttribute('value', token.id);
+  form.appendChild(hiddenInput);
+
+  // Submit the form
+  form.submit();
+}
+
+// -----------------Donation Chart----------------------
+var $donationChart = $("#donation-chart");
+      $.ajax({
+        url: $donationChart.data("url"),
+        success: function (data) {
+
+          var ctx = $donationChart[0].getContext("2d");
+
+          console.log(data.years)
+
+          new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: data.years,
+              datasets: [{
+                label: 'Donated Amount Per Year',
+                data: data.donate_amount,
+                backgroundColor: "rgba(255,0,0,0.4)",
+                borderColor: "red",
+              }]
+            },
+            options: {
+              responsive: true,
+              scales: {
+                  xAxes: [{
+                    scaleLabel: {
+                            display: true,
+                            labelString: 'Year',
+                            fontColor: "red",
+                            fontSize: 16
+                        },
+                    gridLines: {
+                        color: "rgba(255, 0, 0, 0.2)",
+                    },
+                    ticks: {
+                        fontColor: "red",
+                        fontSize: 14
+                    }
+                  }],
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero: true
+                      }
+                  }]
+              },
+              legend: {
+                position: 'top',
+              },
+              title: {
+                display: true,
+                text: 'Donation Chart'
+              }
+            }
+          });
+
+        }
+    });
