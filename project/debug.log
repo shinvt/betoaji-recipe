@@ -264,3 +264,23 @@ TypeError: 'Recipe' object does not support item assignment
 [25/Apr/2020 14:04:18] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
 [25/Apr/2020 14:04:20] INFO [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 200 14413
 [25/Apr/2020 14:04:23] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 14:05:08] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 14:05:15] INFO [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 200 14413
+[25/Apr/2020 14:05:19] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 14:05:30] INFO [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 200 14413
+[25/Apr/2020 14:05:32] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 14:07:05] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[25/Apr/2020 14:07:05] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 14:07:18] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[25/Apr/2020 14:07:18] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 14:07:27] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[25/Apr/2020 14:07:28] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 14:08:38] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/project/urls.py changed, reloading.
+[25/Apr/2020 14:08:39] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 14:09:47] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23663
+[25/Apr/2020 14:09:50] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23663
+[25/Apr/2020 14:09:52] INFO [django.server:157] "GET /recipes/favorite/ HTTP/1.1" 200 15439
+[25/Apr/2020 14:09:58] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23663
+[25/Apr/2020 14:10:01] INFO [django.server:157] "GET /recipes/6/like/ HTTP/1.1" 200 31
+[25/Apr/2020 14:10:04] INFO [django.server:157] "GET /recipes/favorite/ HTTP/1.1" 200 16787
+[25/Apr/2020 14:10:09] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23669

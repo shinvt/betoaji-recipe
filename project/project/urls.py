@@ -57,6 +57,7 @@ urlpatterns = [
     re_path(r'^recipes/(?P<pk>\d+)/like/$', views.recipe_like, name='recipe_like'),
     re_path(r'^recipes/new/$', views.new_recipe, name='new_recipe'),
     re_path(r'^recipes/filter_by_user/$', views.filter_by_user, name='user_recipes'),
+    re_path(r'^recipes/favorite/$', views.liked_by_user, name='favorite_recipes'),
     re_path(r'^recipes/edit/(?P<pk>\d+)/$',views.RecipeUpdateView.as_view(),name='edit_recipe'),
 
     re_path(r'^donation/$', donate_views.donation, name='donation'),

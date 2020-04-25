@@ -84,9 +84,16 @@ class RecipeUpdateView(UpdateView):
 
 @login_required
 def filter_by_user(request):
-	recipes = get_list_or_404(Recipe)
 	object_list = Recipe.objects.filter(
 		created_by=request.user
+	)
+
+	return render(request, 'recipes.html', {'recipes' : object_list})
+
+@login_required
+def liked_by_user(request):
+	object_list = Recipe.objects.filter(
+		likedUser=request.user
 	)
 
 	return render(request, 'recipes.html', {'recipes' : object_list})
