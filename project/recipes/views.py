@@ -89,12 +89,6 @@ def filter_by_user(request):
 		created_by=request.user
 	)
 
-	for obj in object_list:
-		if request.user in obj.likedUser.all():
-			obj["liked"] = True;
-		else:
-			obj["liked"] = False;
-
 	return render(request, 'recipes.html', {'recipes' : object_list})
 
 @login_required

@@ -190,3 +190,77 @@
 [25/Apr/2020 04:14:24] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
 [25/Apr/2020 04:14:24] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 55
 [25/Apr/2020 04:14:30] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 11:28:47] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 11:29:04] INFO [django.server:157] "GET /settings/account/ HTTP/1.1" 200 13001
+[25/Apr/2020 11:29:04] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 11:29:18] INFO [django.server:157] "GET / HTTP/1.1" 200 23636
+[25/Apr/2020 11:29:18] INFO [django.server:157] "GET /media//cusine/banhmi.jpg HTTP/1.1" 200 1349436
+[25/Apr/2020 11:29:18] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.58.24.png HTTP/1.1" 200 2304363
+[25/Apr/2020 11:29:36] INFO [django.server:157] "GET /recipes/2/like/ HTTP/1.1" 200 31
+[25/Apr/2020 11:29:37] INFO [django.server:157] "GET /recipes/2/like/ HTTP/1.1" 200 31
+[25/Apr/2020 11:29:37] INFO [django.server:157] "GET /recipes/2/like/ HTTP/1.1" 200 31
+[25/Apr/2020 11:29:38] INFO [django.server:157] "GET /recipes/2/like/ HTTP/1.1" 200 31
+[25/Apr/2020 11:29:40] INFO [django.server:157] "GET /recipes/2/like/ HTTP/1.1" 200 31
+[25/Apr/2020 11:29:42] INFO [django.server:157] "GET /recipes/2/like/ HTTP/1.1" 200 31
+[25/Apr/2020 11:29:45] INFO [django.server:157] "GET /recipes/2/ HTTP/1.1" 200 13723
+[25/Apr/2020 11:29:48] INFO [django.server:157] "GET / HTTP/1.1" 200 23636
+[25/Apr/2020 11:29:59] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13267
+[25/Apr/2020 11:29:59] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 55
+[25/Apr/2020 11:30:21] INFO [django.server:157] "POST /donation/charge HTTP/1.1" 302 0
+[25/Apr/2020 11:30:21] INFO [django.server:157] "GET /donation/success HTTP/1.1" 200 12300
+[25/Apr/2020 11:30:23] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13267
+[25/Apr/2020 11:30:23] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 55
+[25/Apr/2020 11:31:06] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 11:31:13] INFO [django.server:157] "GET /recipes/9/ HTTP/1.1" 200 13983
+[25/Apr/2020 11:31:30] INFO [django.server:157] "GET / HTTP/1.1" 200 23636
+[25/Apr/2020 11:31:34] ERROR [django.request:228] Internal Server Error: /recipes/filter_by_user/
+Traceback (most recent call last):
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py", line 96, in filter_by_user
+    obj["liked"] = False;
+TypeError: 'Recipe' object does not support item assignment
+[25/Apr/2020 11:31:34] ERROR [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 500 80241
+[25/Apr/2020 11:31:47] ERROR [django.request:228] Internal Server Error: /recipes/filter_by_user/
+Traceback (most recent call last):
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py", line 96, in filter_by_user
+    obj["liked"] = False;
+TypeError: 'Recipe' object does not support item assignment
+[25/Apr/2020 11:31:47] ERROR [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 500 80241
+[25/Apr/2020 11:31:58] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 14:02:59] ERROR [django.request:228] Internal Server Error: /recipes/filter_by_user/
+Traceback (most recent call last):
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py", line 96, in filter_by_user
+    obj["liked"] = False;
+TypeError: 'Recipe' object does not support item assignment
+[25/Apr/2020 14:02:59] ERROR [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 500 80249
+[25/Apr/2020 14:04:07] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[25/Apr/2020 14:04:08] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 14:04:10] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.58.24.png HTTP/1.1" 200 2304363
+[25/Apr/2020 14:04:13] INFO [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 200 14413
+[25/Apr/2020 14:04:14] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 14:04:18] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 14:04:20] INFO [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 200 14413
+[25/Apr/2020 14:04:23] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
