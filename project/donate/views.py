@@ -58,6 +58,8 @@ def update_chart(request):
 
 	years =  list(dict.fromkeys(years_list))
 
+	years.sort()
+
 	donate_amount  =  []
 	queryset = Donation.objects.annotate(years=ExtractYear('donate_time')).values('years').annotate(donate_amount_sum=Sum('donate_amount'))
 	for amount in queryset:

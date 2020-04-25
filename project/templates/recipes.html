@@ -38,27 +38,36 @@
   {% for recipe in recipes %}
   {% if forloop.counter0|divisibleby:4 %} <div class="row text-center"> {%  endif %}
   <div class="shadow col-md-3 recipe_{{ recipe.pk }}">
-      <div class="card" style='width:100%; height:350px;'>
-          <img src="{{ MEDIA_URL }}/{{ recipe.image }}" style="width:100%;height:220px;" class="card-img-top" alt="{{ recipe.name }}">
-          <div class="card-body pt-1">
-            <a href="{% url 'recipe_detail' pk=recipe.pk %}" >
-              <h5 class="card-title"> {{ recipe.name }}</h5>
-            </a>
+      <div class="card" style='width:100%; height:280px;'>
+          <div class="card-img-top">
+            <img src="{{ MEDIA_URL }}/{{ recipe.image }}" style="width:100%;height:220px;z-index: 0;backface-visibility: hidden;" alt="{{ recipe.name }}">
+            <div class="card-img-overlay">
+              <a href="{% url 'recipe_detail' pk=recipe.pk %}" >
+                <div class="text">Read More</div>
+              </a>
+            </div>
+          </div>
+          <div class="card-body pt-3 pl-3 pr-3">
+            <div class="card-title">
+              <a href="{% url 'recipe_detail' pk=recipe.pk %}" >
+                <h5 class="recipe-name" > {{ recipe.name }}</h5>
+              </a>
 
-            <div class="likebtn">
-              {% if user in recipe.likedUser.all  %}
-                <i class="fa fa-heart like-icon liked" id="like-icon_{{ recipe.pk }}" ></i>
-              {% else %}
-                <i class="fa fa-heart like-icon" id="like-icon_{{ recipe.pk }}" ></i>
-              {% endif %}
-              <p class="like-count" id="like-count_{{ recipe.pk }}"> {{recipe.like_count}}{{recipe.test}} </p>
+              <div class="like-btn">
+                {% if user in recipe.likedUser.all  %}
+                  <i class="fa fa-heart like-icon liked" id="like-icon_{{ recipe.pk }}" ></i>
+                {% else %}
+                  <i class="fa fa-heart like-icon" id="like-icon_{{ recipe.pk }}" ></i>
+                {% endif %}
+                <p class="like-count" id="like-count_{{ recipe.pk }}"> {{recipe.like_count}}{{recipe.test}} </p>
+              </div>
             </div>
 
-            <div class="card-text" style="display:flex">
+            <!-- <div class="card-text" style="display:flex">
               {% for tag in recipe.tags.all %}
               <a href="#" class="mr-1 badge badge-info">#{{ tag }}</a>
               {% endfor %}
-            </div>
+            </div> -->
           </div>
       </div>
   </div>
