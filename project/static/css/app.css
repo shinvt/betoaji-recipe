@@ -95,6 +95,17 @@ a.btn-donate{
 
 .text {
   color: white;
-  font-size: 30px;
-  padding: 16px 32px;
+  font-size: 18px;
+  padding: 10px 10px 10px 10px;
+  text-align: start;
+  height: 190px;
+  position: relative;
+  overflow: hidden;
+}
+
+.text:after {
+  content: "...";
+  height: 190px;
+  width: 100%;
+  position: absolute;
 }

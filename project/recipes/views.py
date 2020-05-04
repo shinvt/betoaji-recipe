@@ -16,8 +16,7 @@ logger = logging.getLogger(__name__)
 
 def home(request):
 	if request.user.is_authenticated:
-		recipes = get_list_or_404(Recipe)
-		return render(request, 'recipes.html', {'recipes' : recipes})
+		return redirect('/recipes/')
 	else:
 		return render(request, 'home.html')
 
@@ -29,14 +28,18 @@ class RecipeListView(ListView):
 	template_name = 'recipes.html'
 
 	def get_queryset(self):
-		if self.request.GET.get('q'):
-			query = self.request.GET.get('q')
+		query = self.request.GET.get('q')
+		if query is not None:
 			object_list = Recipe.objects.filter(
 				Q(name__icontains=query)| Q(description__icontains=query)
 			)
 		else:
 			object_list = Recipe.objects.all()
 		return object_list
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		return context
 
 
 def recipe_detail(request, pk):

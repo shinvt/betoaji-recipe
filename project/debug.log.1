@@ -1,226 +1,219 @@
-[12/Apr/2020 07:33:14] ERROR [django.request:228] Internal Server Error: /admin/donate/donation/
-Traceback (most recent call last):
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/db/models/options.py", line 581, in get_field
-    return self.fields_map[field_name]
-KeyError: '__str__'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/contrib/admin/utils.py", line 262, in lookup_field
-    f = _get_non_gfk_field(opts, name)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/contrib/admin/utils.py", line 293, in _get_non_gfk_field
-    field = opts.get_field(name)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/db/models/options.py", line 583, in get_field
-    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
-django.core.exceptions.FieldDoesNotExist: Donation has no field named '__str__'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
-    response = get_response(request)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 145, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 143, in _get_response
-    response = response.render()
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/response.py", line 105, in render
-    self.content = self.rendered_content
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/response.py", line 83, in rendered_content
-    return template.render(context, self._request)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
-    return self.template.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 171, in render
-    return self._render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/test/utils.py", line 95, in instrumented_test_render
-    return self.nodelist.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
-    return compiled_parent._render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/test/utils.py", line 95, in instrumented_test_render
-    return self.nodelist.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
-    return compiled_parent._render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/test/utils.py", line 95, in instrumented_test_render
-    return self.nodelist.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
-    result = block.nodelist.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
-    result = block.nodelist.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/contrib/admin/templatetags/base.py", line 33, in render
-    return super().render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/library.py", line 214, in render
-    _dict = self.func(*resolved_args, **resolved_kwargs)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 342, in result_list
-    'results': list(results(cl)),
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 318, in results
-    yield ResultList(None, items_for_result(cl, res, None))
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 309, in __init__
-    super().__init__(*items)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 232, in items_for_result
-    f, attr, value = lookup_field(field_name, result, cl.model_admin)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/contrib/admin/utils.py", line 275, in lookup_field
-    value = attr()
-  File "/Users/jishin/Documents/Project/BetoajRecipe/project/donate/models.py", line 11, in __str__
-    return self.name
-AttributeError: 'Donation' object has no attribute 'name'
-[12/Apr/2020 07:33:14] ERROR [django.server:157] "GET /admin/donate/donation/ HTTP/1.1" 500 322062
-[12/Apr/2020 07:35:51] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/donate/models.py changed, reloading.
-[12/Apr/2020 07:35:52] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[12/Apr/2020 07:36:02] INFO [django.server:157] "GET /admin/donate/donation/ HTTP/1.1" 200 13726
-[12/Apr/2020 07:36:02] INFO [django.server:157] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6190
-[12/Apr/2020 07:36:02] INFO [django.server:157] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
-[12/Apr/2020 07:36:02] INFO [django.server:157] "GET /static/admin/js/core.js HTTP/1.1" 200 5723
-[12/Apr/2020 07:36:02] INFO [django.server:157] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
-[12/Apr/2020 07:36:02] INFO [django.server:157] "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
-[12/Apr/2020 07:36:02] INFO [django.server:157] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
-[12/Apr/2020 07:36:02] INFO [django.server:157] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
-[12/Apr/2020 07:36:02] INFO [django.server:157] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
-[12/Apr/2020 07:36:02] INFO [django.server:157] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 280364
-[12/Apr/2020 07:36:02] INFO [django.server:157] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
-[12/Apr/2020 07:36:02] INFO [django.server:157] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
-[12/Apr/2020 07:36:05] ERROR [django.request:228] Internal Server Error: /admin/donate/donation/1/change/
-Traceback (most recent call last):
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
-    response = get_response(request)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 145, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 143, in _get_response
-    response = response.render()
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/response.py", line 105, in render
-    self.content = self.rendered_content
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/response.py", line 83, in rendered_content
-    return template.render(context, self._request)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
-    return self.template.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 171, in render
-    return self._render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/test/utils.py", line 95, in instrumented_test_render
-    return self.nodelist.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
-    return compiled_parent._render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/test/utils.py", line 95, in instrumented_test_render
-    return self.nodelist.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
-    return compiled_parent._render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/test/utils.py", line 95, in instrumented_test_render
-    return self.nodelist.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 309, in render
-    return nodelist.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
-    result = block.nodelist.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/defaulttags.py", line 309, in render
-    return nodelist.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 986, in render
-    output = self.filter_expression.resolve(context)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/base.py", line 697, in resolve
-    new_obj = func(obj, *arg_vals)
-  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/template/defaultfilters.py", line 42, in _dec
-    args[0] = str(args[0])
-TypeError: __str__ returned non-string (type User)
-[12/Apr/2020 07:36:05] ERROR [django.server:157] "GET /admin/donate/donation/1/change/ HTTP/1.1" 500 201576
-[12/Apr/2020 07:38:25] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/donate/models.py changed, reloading.
-[12/Apr/2020 07:38:26] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[12/Apr/2020 07:38:32] INFO [django.server:157] "GET /admin/donate/donation/1/change/ HTTP/1.1" 200 15753
-[12/Apr/2020 07:38:32] INFO [django.server:157] "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
-[12/Apr/2020 07:38:32] INFO [django.server:157] "GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
-[12/Apr/2020 07:38:32] INFO [django.server:157] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20232
-[12/Apr/2020 07:38:32] INFO [django.server:157] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
-[12/Apr/2020 07:38:32] INFO [django.server:157] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10322
-[12/Apr/2020 07:38:32] INFO [django.server:157] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
-[12/Apr/2020 07:38:32] INFO [django.server:157] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
-[12/Apr/2020 07:38:32] INFO [django.server:157] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
-[12/Apr/2020 07:38:32] INFO [django.server:157] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
-[12/Apr/2020 07:38:46] INFO [django.server:157] "GET /admin/donate/donation/ HTTP/1.1" 200 13739
-[12/Apr/2020 07:38:46] INFO [django.server:157] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
-[12/Apr/2020 07:39:52] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/donate/views.py changed, reloading.
-[12/Apr/2020 07:39:53] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[12/Apr/2020 07:40:02] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13268
-[12/Apr/2020 07:40:02] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 304 0
-[12/Apr/2020 07:40:02] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[12/Apr/2020 07:40:02] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 42
-[12/Apr/2020 07:40:02] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[12/Apr/2020 07:40:02] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[12/Apr/2020 07:43:01] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13266
-[12/Apr/2020 07:43:01] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 200 4796
-[12/Apr/2020 07:43:01] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[12/Apr/2020 07:43:01] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[12/Apr/2020 07:43:01] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 42
-[12/Apr/2020 07:43:01] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[12/Apr/2020 07:45:23] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13266
-[12/Apr/2020 07:45:23] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 200 4570
-[12/Apr/2020 07:45:23] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[12/Apr/2020 07:45:23] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[12/Apr/2020 07:45:23] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 42
-[12/Apr/2020 07:45:23] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[12/Apr/2020 07:46:01] INFO [django.server:157] "POST /donation/charge HTTP/1.1" 302 0
-[12/Apr/2020 07:46:01] INFO [django.server:157] "GET /donation/success HTTP/1.1" 200 12299
-[12/Apr/2020 07:46:01] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 304 0
-[12/Apr/2020 07:46:02] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13266
-[12/Apr/2020 07:46:03] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 49
-[12/Apr/2020 07:46:44] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/donate/views.py changed, reloading.
-[12/Apr/2020 07:46:45] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[12/Apr/2020 07:46:50] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13268
-[12/Apr/2020 07:46:50] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 304 0
-[12/Apr/2020 07:46:50] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 41
-[12/Apr/2020 07:47:06] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/donate/views.py changed, reloading.
-[12/Apr/2020 07:47:06] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[12/Apr/2020 07:49:58] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/donate/views.py changed, reloading.
-[12/Apr/2020 07:49:59] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[12/Apr/2020 07:50:03] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13268
-[12/Apr/2020 07:50:03] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 304 0
-[12/Apr/2020 07:50:03] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 43
-[12/Apr/2020 07:50:26] INFO [django.server:157] "POST /donation/charge HTTP/1.1" 302 0
-[12/Apr/2020 07:50:26] INFO [django.server:157] "GET /donation/success HTTP/1.1" 200 12299
-[12/Apr/2020 07:50:27] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13266
-[12/Apr/2020 07:50:28] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 43
-[12/Apr/2020 07:51:02] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 20595
-[12/Apr/2020 07:51:02] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 304 0
-[12/Apr/2020 13:06:20] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[12/Apr/2020 13:06:33] ERROR [django.request:228] Internal Server Error: /recipes/filter_by_user/
+[25/Apr/2020 03:24:36] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 03:24:36] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:24:36] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:24:36] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:24:47] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21459
+[25/Apr/2020 03:24:47] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 03:24:47] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:24:47] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:24:47] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:24:57] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21459
+[25/Apr/2020 03:24:57] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:24:57] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:24:57] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:25:18] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21585
+[25/Apr/2020 03:25:18] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 03:25:18] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:25:18] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:25:18] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:25:31] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21585
+[25/Apr/2020 03:25:31] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:25:32] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:25:32] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:25:55] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21459
+[25/Apr/2020 03:25:55] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 03:25:55] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:25:55] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:25:55] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:27:47] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 03:27:47] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:27:47] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:27:47] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:28:27] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21549
+[25/Apr/2020 03:28:27] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 03:28:27] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:28:27] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:28:27] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:28:37] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21549
+[25/Apr/2020 03:28:37] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:28:37] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:28:37] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:28:56] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21549
+[25/Apr/2020 03:28:57] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:28:57] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:28:57] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:29:11] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21549
+[25/Apr/2020 03:29:11] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 03:29:11] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:29:11] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:29:11] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:29:25] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21549
+[25/Apr/2020 03:29:25] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:29:25] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:29:25] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:29:30] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21549
+[25/Apr/2020 03:29:31] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:29:31] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:29:31] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:30:21] INFO [django.server:157] "GET /recipes/1/like/ HTTP/1.1" 200 31
+[25/Apr/2020 03:30:22] INFO [django.server:157] "GET /recipes/1/like/ HTTP/1.1" 200 31
+[25/Apr/2020 03:37:18] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21855
+[25/Apr/2020 03:37:18] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 03:44:52] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22458
+[25/Apr/2020 03:44:52] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1363
+[25/Apr/2020 03:45:21] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22458
+[25/Apr/2020 03:45:21] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1365
+[25/Apr/2020 03:45:28] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 03:45:28] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:45:28] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:45:28] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:47:11] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22611
+[25/Apr/2020 03:47:11] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1368
+[25/Apr/2020 03:47:11] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:47:11] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:47:11] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:47:49] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22611
+[25/Apr/2020 03:47:49] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1386
+[25/Apr/2020 03:47:49] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:47:49] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:47:49] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:48:50] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22611
+[25/Apr/2020 03:48:50] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1430
+[25/Apr/2020 03:48:50] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:48:50] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:48:50] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:49:20] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22611
+[25/Apr/2020 03:49:20] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1427
+[25/Apr/2020 03:49:20] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:49:20] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:49:20] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:49:34] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22611
+[25/Apr/2020 03:49:34] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1425
+[25/Apr/2020 03:49:34] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:49:34] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:49:34] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:52:57] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22611
+[25/Apr/2020 03:52:57] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1443
+[25/Apr/2020 03:52:58] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:52:58] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:52:58] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:53:48] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22611
+[25/Apr/2020 03:53:48] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1449
+[25/Apr/2020 03:53:48] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:53:48] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:53:48] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:56:58] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22773
+[25/Apr/2020 03:56:58] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1322
+[25/Apr/2020 03:56:58] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:56:58] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:56:58] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:57:56] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22818
+[25/Apr/2020 03:57:56] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 03:57:57] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:57:57] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:57:57] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 03:58:33] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23070
+[25/Apr/2020 03:58:33] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 03:58:33] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 03:58:33] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 03:58:33] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 04:00:17] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23070
+[25/Apr/2020 04:00:17] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1632
+[25/Apr/2020 04:00:17] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 04:00:17] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 04:00:17] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 04:02:30] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22422
+[25/Apr/2020 04:02:30] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1789
+[25/Apr/2020 04:02:30] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 04:02:30] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 04:02:30] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 04:03:55] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23115
+[25/Apr/2020 04:03:55] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1706
+[25/Apr/2020 04:03:56] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 04:03:56] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 04:03:56] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 04:05:33] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23115
+[25/Apr/2020 04:05:33] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1759
+[25/Apr/2020 04:05:33] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 04:05:33] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 04:05:34] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 04:06:52] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23115
+[25/Apr/2020 04:06:52] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1744
+[25/Apr/2020 04:06:52] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 04:06:52] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 04:06:52] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 04:07:18] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23115
+[25/Apr/2020 04:07:18] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1757
+[25/Apr/2020 04:07:19] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 04:07:19] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 04:07:19] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 04:07:48] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23115
+[25/Apr/2020 04:07:48] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1712
+[25/Apr/2020 04:07:48] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 04:07:48] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 04:07:48] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 04:08:08] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23115
+[25/Apr/2020 04:08:08] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1636
+[25/Apr/2020 04:08:09] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 04:08:09] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 04:08:09] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 04:09:20] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 04:09:20] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 04:09:20] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 04:09:20] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 04:09:20] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 04:09:24] INFO [django.server:157] "GET /recipes/1/ HTTP/1.1" 200 13547
+[25/Apr/2020 04:09:24] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 04:09:24] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 04:09:24] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 04:09:27] INFO [django.server:157] "GET / HTTP/1.1" 200 23636
+[25/Apr/2020 04:09:27] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 04:09:27] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 04:09:27] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 04:10:36] INFO [django.server:157] "GET / HTTP/1.1" 200 23636
+[25/Apr/2020 04:10:36] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1668
+[25/Apr/2020 04:11:28] INFO [django.server:157] "GET / HTTP/1.1" 200 23636
+[25/Apr/2020 04:11:28] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1700
+[25/Apr/2020 04:11:33] INFO [django.server:157] "GET / HTTP/1.1" 200 23636
+[25/Apr/2020 04:11:33] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 04:11:59] INFO [django.server:157] "GET / HTTP/1.1" 200 23636
+[25/Apr/2020 04:11:59] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1714
+[25/Apr/2020 04:12:08] INFO [django.server:157] "GET / HTTP/1.1" 200 23636
+[25/Apr/2020 04:12:09] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1714
+[25/Apr/2020 04:12:29] INFO [django.server:157] "GET / HTTP/1.1" 200 23636
+[25/Apr/2020 04:12:29] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1636
+[25/Apr/2020 04:13:14] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 04:13:14] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 04:13:14] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 04:13:14] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 04:14:24] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13267
+[25/Apr/2020 04:14:24] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 04:14:24] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 55
+[25/Apr/2020 04:14:30] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 11:28:47] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 11:29:04] INFO [django.server:157] "GET /settings/account/ HTTP/1.1" 200 13001
+[25/Apr/2020 11:29:04] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 11:29:18] INFO [django.server:157] "GET / HTTP/1.1" 200 23636
+[25/Apr/2020 11:29:18] INFO [django.server:157] "GET /media//cusine/banhmi.jpg HTTP/1.1" 200 1349436
+[25/Apr/2020 11:29:18] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.58.24.png HTTP/1.1" 200 2304363
+[25/Apr/2020 11:29:36] INFO [django.server:157] "GET /recipes/2/like/ HTTP/1.1" 200 31
+[25/Apr/2020 11:29:37] INFO [django.server:157] "GET /recipes/2/like/ HTTP/1.1" 200 31
+[25/Apr/2020 11:29:37] INFO [django.server:157] "GET /recipes/2/like/ HTTP/1.1" 200 31
+[25/Apr/2020 11:29:38] INFO [django.server:157] "GET /recipes/2/like/ HTTP/1.1" 200 31
+[25/Apr/2020 11:29:40] INFO [django.server:157] "GET /recipes/2/like/ HTTP/1.1" 200 31
+[25/Apr/2020 11:29:42] INFO [django.server:157] "GET /recipes/2/like/ HTTP/1.1" 200 31
+[25/Apr/2020 11:29:45] INFO [django.server:157] "GET /recipes/2/ HTTP/1.1" 200 13723
+[25/Apr/2020 11:29:48] INFO [django.server:157] "GET / HTTP/1.1" 200 23636
+[25/Apr/2020 11:29:59] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13267
+[25/Apr/2020 11:29:59] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 55
+[25/Apr/2020 11:30:21] INFO [django.server:157] "POST /donation/charge HTTP/1.1" 302 0
+[25/Apr/2020 11:30:21] INFO [django.server:157] "GET /donation/success HTTP/1.1" 200 12300
+[25/Apr/2020 11:30:23] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13267
+[25/Apr/2020 11:30:23] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 55
+[25/Apr/2020 11:31:06] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 11:31:13] INFO [django.server:157] "GET /recipes/9/ HTTP/1.1" 200 13983
+[25/Apr/2020 11:31:30] INFO [django.server:157] "GET / HTTP/1.1" 200 23636
+[25/Apr/2020 11:31:34] ERROR [django.request:228] Internal Server Error: /recipes/filter_by_user/
 Traceback (most recent call last):
   File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
     response = get_response(request)
@@ -233,283 +226,282 @@ Traceback (most recent call last):
   File "/Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py", line 96, in filter_by_user
     obj["liked"] = False;
 TypeError: 'Recipe' object does not support item assignment
-[12/Apr/2020 13:06:33] ERROR [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 500 80102
-[12/Apr/2020 13:06:34] INFO [django.server:157] "GET / HTTP/1.1" 200 20585
-[12/Apr/2020 13:06:35] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:41] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET / HTTP/1.1" 200 20585
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /static/js/popper.min.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /media//cusine/banhmi.jpg HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_23.02.33.png HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.59.43.png HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_23.32.44.png HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.58.24.png HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_23.39.54.png HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_22.28.08.png HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-14_at_21.51.41.png HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-20_at_22.07.34.png HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
-[18/Apr/2020 09:29:46] INFO [django.server:157] "GET /static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /admin/donate/donation/ HTTP/1.1" 200 14208
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/css/base.css HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/js/core.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
-[18/Apr/2020 09:29:53] INFO [django.server:157] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
-[18/Apr/2020 09:29:58] INFO [django.server:157] "GET /admin/donate/donation/3/change/ HTTP/1.1" 200 15753
-[18/Apr/2020 09:29:58] INFO [django.server:157] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:58] INFO [django.server:157] "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:58] INFO [django.server:157] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
-[18/Apr/2020 09:29:58] INFO [django.server:157] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
-[18/Apr/2020 09:29:58] INFO [django.server:157] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
-[18/Apr/2020 09:29:58] INFO [django.server:157] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:58] INFO [django.server:157] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
-[18/Apr/2020 09:29:58] INFO [django.server:157] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
-[18/Apr/2020 09:29:58] INFO [django.server:157] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
-[18/Apr/2020 09:29:58] INFO [django.server:157] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
-[18/Apr/2020 09:29:58] INFO [django.server:157] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
-[18/Apr/2020 09:30:02] INFO [django.server:157] "GET /admin/donate/donation/ HTTP/1.1" 200 14208
-[18/Apr/2020 09:30:02] INFO [django.server:157] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
-[18/Apr/2020 09:30:04] INFO [django.server:157] "GET /admin/donate/donation/add/ HTTP/1.1" 200 15487
-[18/Apr/2020 09:30:05] INFO [django.server:157] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
-[18/Apr/2020 09:30:16] INFO [django.server:157] "GET /static/admin/img/calendar-icons.svg HTTP/1.1" 200 1094
-[18/Apr/2020 09:30:34] INFO [django.server:157] "GET /admin/donate/donation/ HTTP/1.1" 200 14208
-[18/Apr/2020 09:30:34] INFO [django.server:157] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
-[18/Apr/2020 09:30:36] INFO [django.server:157] "GET /admin/donate/donation/3/change/ HTTP/1.1" 200 15753
-[18/Apr/2020 09:30:36] INFO [django.server:157] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
-[18/Apr/2020 09:30:43] INFO [django.server:157] "GET /admin/donate/donation/ HTTP/1.1" 200 14208
-[18/Apr/2020 09:30:43] INFO [django.server:157] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
-[18/Apr/2020 09:30:48] INFO [django.server:157] "GET /admin/donate/donation/add/ HTTP/1.1" 200 15487
-[18/Apr/2020 09:30:48] INFO [django.server:157] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
-[18/Apr/2020 09:31:13] INFO [django.server:157] "POST /admin/donate/donation/add/ HTTP/1.1" 302 0
-[18/Apr/2020 09:31:14] INFO [django.server:157] "GET /admin/donate/donation/ HTTP/1.1" 200 14643
-[18/Apr/2020 09:31:14] INFO [django.server:157] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
-[18/Apr/2020 09:31:14] INFO [django.server:157] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
-[18/Apr/2020 09:31:18] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13266
-[18/Apr/2020 09:31:18] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 55
-[18/Apr/2020 09:31:21] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13266
-[18/Apr/2020 09:31:21] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 55
-[18/Apr/2020 09:32:03] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/donate/views.py changed, reloading.
-[18/Apr/2020 09:32:04] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[18/Apr/2020 09:32:11] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/donate/views.py changed, reloading.
-[18/Apr/2020 09:32:12] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[18/Apr/2020 09:32:16] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13268
-[18/Apr/2020 09:32:16] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 47
-[18/Apr/2020 09:32:31] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/donate/views.py changed, reloading.
-[18/Apr/2020 09:32:32] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[18/Apr/2020 09:32:35] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13268
-[18/Apr/2020 09:32:36] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 55
-[18/Apr/2020 09:32:52] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/donate/views.py changed, reloading.
-[18/Apr/2020 09:32:53] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[18/Apr/2020 09:33:07] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/donate/views.py changed, reloading.
-[18/Apr/2020 09:33:08] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[18/Apr/2020 09:33:11] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13268
-[18/Apr/2020 09:33:11] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 55
-[18/Apr/2020 09:33:32] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/donate/views.py changed, reloading.
-[18/Apr/2020 09:33:33] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[18/Apr/2020 09:33:35] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13268
-[18/Apr/2020 09:33:35] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 55
-[18/Apr/2020 09:33:51] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/donate/views.py changed, reloading.
-[18/Apr/2020 09:33:52] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[18/Apr/2020 09:33:54] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13268
-[18/Apr/2020 09:33:54] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 55
-[18/Apr/2020 09:35:37] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13267
-[18/Apr/2020 09:35:37] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 55
-[18/Apr/2020 09:37:39] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 20595
-[18/Apr/2020 09:45:10] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[18/Apr/2020 09:45:15] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22661
-[18/Apr/2020 09:45:30] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[18/Apr/2020 09:45:30] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[18/Apr/2020 09:45:30] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[18/Apr/2020 09:46:28] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22660
-[18/Apr/2020 09:46:28] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[18/Apr/2020 09:46:28] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[18/Apr/2020 09:46:28] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[18/Apr/2020 09:47:53] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22660
-[18/Apr/2020 09:47:53] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[18/Apr/2020 09:47:53] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[18/Apr/2020 09:47:53] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[18/Apr/2020 09:48:25] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 302 0
-[18/Apr/2020 09:48:25] INFO [django.server:157] "GET /login/?next=/recipes/ HTTP/1.1" 200 11783
-[18/Apr/2020 09:48:25] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1234
-[18/Apr/2020 09:48:25] INFO [django.server:157] "GET /static/css/accounts.css HTTP/1.1" 200 200
-[18/Apr/2020 09:48:25] INFO [django.server:157] "GET /static/js/popper.min.js HTTP/1.1" 200 19033
-[18/Apr/2020 09:48:25] INFO [django.server:157] "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
-[18/Apr/2020 09:48:25] INFO [django.server:157] "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 14984
-[18/Apr/2020 09:48:25] INFO [django.server:157] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
-[18/Apr/2020 09:48:25] INFO [django.server:157] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 144877
-[18/Apr/2020 09:48:25] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 200 4570
-[18/Apr/2020 09:48:25] INFO [django.server:157] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 60010
-[18/Apr/2020 09:48:25] INFO [django.server:157] "GET /static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 200 404
-[18/Apr/2020 09:48:25] INFO [django.server:157] "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 12791
-[18/Apr/2020 09:48:26] INFO [django.server:157] "GET /static/img/webb.png HTTP/1.1" 200 12240
-[18/Apr/2020 09:48:26] INFO [django.server:157] "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 41
-[18/Apr/2020 09:48:30] INFO [django.server:157] "POST /login/?next=/recipes/ HTTP/1.1" 302 0
-[18/Apr/2020 09:48:30] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22660
-[18/Apr/2020 09:48:30] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
-[18/Apr/2020 09:48:31] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_23.02.33.png HTTP/1.1" 200 821591
-[18/Apr/2020 09:48:31] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_23.32.44.png HTTP/1.1" 200 777361
-[18/Apr/2020 09:48:31] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_22.28.08.png HTTP/1.1" 200 1058745
-[18/Apr/2020 09:48:31] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.59.43.png HTTP/1.1" 200 1257894
-[18/Apr/2020 09:48:31] INFO [django.server:157] "GET /media//cusine/banhmi.jpg HTTP/1.1" 200 1349436
-[18/Apr/2020 09:48:31] INFO [django.server:157] "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
-[18/Apr/2020 09:48:31] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-14_at_21.51.41.png HTTP/1.1" 200 547772
-[18/Apr/2020 09:48:31] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-20_at_22.07.34.png HTTP/1.1" 200 650373
-[18/Apr/2020 09:48:31] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_23.39.54.png HTTP/1.1" 200 889091
-[18/Apr/2020 09:48:31] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.58.24.png HTTP/1.1" 200 2304363
-[18/Apr/2020 09:48:39] INFO [django.server:157] "GET /static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 200 882
-[18/Apr/2020 09:49:16] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22759
-[18/Apr/2020 09:49:16] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1233
-[18/Apr/2020 09:58:43] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[18/Apr/2020 09:58:47] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22681
-[18/Apr/2020 09:58:47] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1294
-[18/Apr/2020 09:59:27] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22678
-[18/Apr/2020 09:59:27] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1264
-[18/Apr/2020 09:59:34] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
-[18/Apr/2020 09:59:34] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[18/Apr/2020 09:59:34] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[18/Apr/2020 09:59:34] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[18/Apr/2020 10:00:01] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22759
-[18/Apr/2020 10:00:01] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
-[18/Apr/2020 10:00:02] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[18/Apr/2020 10:00:02] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[18/Apr/2020 10:00:02] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[18/Apr/2020 10:03:42] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22795
-[18/Apr/2020 10:03:42] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1233
-[18/Apr/2020 10:03:42] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[18/Apr/2020 10:03:42] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[18/Apr/2020 10:03:42] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[18/Apr/2020 10:04:07] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22795
-[18/Apr/2020 10:04:07] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1216
-[18/Apr/2020 10:04:21] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
-[18/Apr/2020 10:04:21] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[18/Apr/2020 10:04:21] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[18/Apr/2020 10:04:21] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[18/Apr/2020 10:07:54] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 22795
-[18/Apr/2020 10:07:54] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
-[18/Apr/2020 10:07:54] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[18/Apr/2020 10:07:54] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[18/Apr/2020 10:07:54] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[25/Apr/2020 03:07:13] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 20784
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_23.02.33.png HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /media//cusine/banhmi.jpg HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1133
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /static/js/popper.min.js HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_22.28.08.png HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.59.43.png HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_23.32.44.png HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.58.24.png HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_23.39.54.png HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-14_at_21.51.41.png HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-20_at_22.07.34.png HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
-[25/Apr/2020 03:07:17] INFO [django.server:157] "GET /static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 304 0
-[25/Apr/2020 03:09:33] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21486
-[25/Apr/2020 03:09:34] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1173
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 302 0
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /login/?next=/recipes/ HTTP/1.1" 200 11783
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 144877
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /static/css/accounts.css HTTP/1.1" 200 200
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1173
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 14984
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /static/js/popper.min.js HTTP/1.1" 200 19033
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 200 4570
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 60010
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 200 404
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 12791
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /static/img/webb.png HTTP/1.1" 200 12240
-[25/Apr/2020 03:09:43] INFO [django.server:157] "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 41
-[25/Apr/2020 03:09:45] INFO [django.server:157] "POST /login/?next=/recipes/ HTTP/1.1" 302 0
-[25/Apr/2020 03:09:46] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21486
-[25/Apr/2020 03:09:46] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
-[25/Apr/2020 03:09:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_23.02.33.png HTTP/1.1" 200 821591
-[25/Apr/2020 03:09:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_23.32.44.png HTTP/1.1" 200 777361
-[25/Apr/2020 03:09:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_22.28.08.png HTTP/1.1" 200 1058745
-[25/Apr/2020 03:09:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.59.43.png HTTP/1.1" 200 1257894
-[25/Apr/2020 03:09:46] INFO [django.server:157] "GET /media//cusine/banhmi.jpg HTTP/1.1" 200 1349436
-[25/Apr/2020 03:09:46] INFO [django.server:157] "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
-[25/Apr/2020 03:09:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-14_at_21.51.41.png HTTP/1.1" 200 547772
-[25/Apr/2020 03:09:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-20_at_22.07.34.png HTTP/1.1" 200 650373
-[25/Apr/2020 03:09:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_23.39.54.png HTTP/1.1" 200 889091
-[25/Apr/2020 03:09:46] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.58.24.png HTTP/1.1" 200 2304363
-[25/Apr/2020 03:09:47] INFO [django.server:157] "GET /static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 200 882
-[25/Apr/2020 03:09:53] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
-[25/Apr/2020 03:09:53] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[25/Apr/2020 03:09:53] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[25/Apr/2020 03:09:53] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[25/Apr/2020 03:10:51] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21279
-[25/Apr/2020 03:10:51] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
-[25/Apr/2020 03:10:51] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[25/Apr/2020 03:10:51] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[25/Apr/2020 03:10:52] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[25/Apr/2020 03:11:22] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21279
-[25/Apr/2020 03:11:22] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1174
-[25/Apr/2020 03:11:22] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[25/Apr/2020 03:11:22] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[25/Apr/2020 03:11:22] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[25/Apr/2020 03:19:54] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21459
-[25/Apr/2020 03:19:54] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1258
-[25/Apr/2020 03:19:55] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[25/Apr/2020 03:19:55] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[25/Apr/2020 03:19:55] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[25/Apr/2020 03:22:35] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21459
-[25/Apr/2020 03:22:35] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1292
-[25/Apr/2020 03:22:35] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[25/Apr/2020 03:22:35] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[25/Apr/2020 03:22:35] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[25/Apr/2020 03:22:53] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21459
-[25/Apr/2020 03:22:53] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1242
-[25/Apr/2020 03:22:53] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[25/Apr/2020 03:22:53] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[25/Apr/2020 03:22:53] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[25/Apr/2020 03:23:05] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21459
-[25/Apr/2020 03:23:05] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
-[25/Apr/2020 03:23:05] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[25/Apr/2020 03:23:05] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[25/Apr/2020 03:23:05] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[25/Apr/2020 03:23:28] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21459
-[25/Apr/2020 03:23:28] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
-[25/Apr/2020 03:23:29] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[25/Apr/2020 03:23:29] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[25/Apr/2020 03:23:29] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[25/Apr/2020 03:24:02] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21459
-[25/Apr/2020 03:24:02] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
-[25/Apr/2020 03:24:02] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[25/Apr/2020 03:24:02] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[25/Apr/2020 03:24:02] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[25/Apr/2020 03:24:11] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21459
-[25/Apr/2020 03:24:11] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
-[25/Apr/2020 03:24:12] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
-[25/Apr/2020 03:24:12] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
-[25/Apr/2020 03:24:12] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
-[25/Apr/2020 03:24:36] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 21459
+[25/Apr/2020 11:31:34] ERROR [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 500 80241
+[25/Apr/2020 11:31:47] ERROR [django.request:228] Internal Server Error: /recipes/filter_by_user/
+Traceback (most recent call last):
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py", line 96, in filter_by_user
+    obj["liked"] = False;
+TypeError: 'Recipe' object does not support item assignment
+[25/Apr/2020 11:31:47] ERROR [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 500 80241
+[25/Apr/2020 11:31:58] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 14:02:59] ERROR [django.request:228] Internal Server Error: /recipes/filter_by_user/
+Traceback (most recent call last):
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/venv/lib/python3.7/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py", line 96, in filter_by_user
+    obj["liked"] = False;
+TypeError: 'Recipe' object does not support item assignment
+[25/Apr/2020 14:02:59] ERROR [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 500 80249
+[25/Apr/2020 14:04:07] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[25/Apr/2020 14:04:08] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 14:04:10] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.58.24.png HTTP/1.1" 200 2304363
+[25/Apr/2020 14:04:13] INFO [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 200 14413
+[25/Apr/2020 14:04:14] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 14:04:18] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 14:04:20] INFO [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 200 14413
+[25/Apr/2020 14:04:23] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 14:05:08] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 14:05:15] INFO [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 200 14413
+[25/Apr/2020 14:05:19] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 14:05:30] INFO [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 200 14413
+[25/Apr/2020 14:05:32] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23646
+[25/Apr/2020 14:07:05] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[25/Apr/2020 14:07:05] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 14:07:18] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[25/Apr/2020 14:07:18] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 14:07:27] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[25/Apr/2020 14:07:28] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 14:08:38] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/project/urls.py changed, reloading.
+[25/Apr/2020 14:08:39] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 14:09:47] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23663
+[25/Apr/2020 14:09:50] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23663
+[25/Apr/2020 14:09:52] INFO [django.server:157] "GET /recipes/favorite/ HTTP/1.1" 200 15439
+[25/Apr/2020 14:09:58] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23663
+[25/Apr/2020 14:10:01] INFO [django.server:157] "GET /recipes/6/like/ HTTP/1.1" 200 31
+[25/Apr/2020 14:10:04] INFO [django.server:157] "GET /recipes/favorite/ HTTP/1.1" 200 16787
+[25/Apr/2020 14:10:09] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23669
+[25/Apr/2020 14:10:56] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[25/Apr/2020 14:11:00] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23669
+[25/Apr/2020 14:11:38] INFO [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 200 14430
+[25/Apr/2020 14:11:42] INFO [django.server:157] "GET /recipes/favorite/ HTTP/1.1" 200 16787
+[25/Apr/2020 14:11:44] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 23669
+[25/Apr/2020 14:16:55] INFO [django.server:157] "GET /recipes/1/ HTTP/1.1" 200 13547
+[25/Apr/2020 14:21:24] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:21:54] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:22:07] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:22:07] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:22:07] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:22:30] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:22:31] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:22:31] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:22:31] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:23:15] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 302 0
+[25/Apr/2020 14:23:15] INFO [django.server:157] "GET /login/?next=/recipes/ HTTP/1.1" 200 11783
+[25/Apr/2020 14:23:15] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:23:15] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:23:15] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:23:18] INFO [django.server:157] "POST /login/?next=/recipes/ HTTP/1.1" 302 0
+[25/Apr/2020 14:23:18] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:23:19] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:23:19] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:23:19] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:24:50] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:24:50] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:24:50] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:24:51] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:26:03] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:26:03] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:26:03] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:26:03] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:26:30] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 302 0
+[25/Apr/2020 14:26:30] INFO [django.server:157] "GET /login/?next=/recipes/ HTTP/1.1" 200 11783
+[25/Apr/2020 14:26:31] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1683
+[25/Apr/2020 14:26:31] INFO [django.server:157] "GET /static/css/accounts.css HTTP/1.1" 200 200
+[25/Apr/2020 14:26:31] INFO [django.server:157] "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
+[25/Apr/2020 14:26:31] INFO [django.server:157] "GET /static/js/popper.min.js HTTP/1.1" 200 19033
+[25/Apr/2020 14:26:31] INFO [django.server:157] "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 14984
+[25/Apr/2020 14:26:31] INFO [django.server:157] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 144877
+[25/Apr/2020 14:26:31] INFO [django.server:157] "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 12791
+[25/Apr/2020 14:26:31] INFO [django.server:157] "GET /static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 200 404
+[25/Apr/2020 14:26:31] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 200 4570
+[25/Apr/2020 14:26:31] INFO [django.server:157] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[25/Apr/2020 14:26:31] INFO [django.server:157] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 60010
+[25/Apr/2020 14:26:31] INFO [django.server:157] "GET /static/img/webb.png HTTP/1.1" 200 12240
+[25/Apr/2020 14:26:31] INFO [django.server:157] "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 41
+[25/Apr/2020 14:26:34] INFO [django.server:157] "POST /login/?next=/recipes/ HTTP/1.1" 302 0
+[25/Apr/2020 14:26:35] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:26:35] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_23.32.44.png HTTP/1.1" 200 777361
+[25/Apr/2020 14:26:35] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_22.28.08.png HTTP/1.1" 200 1058745
+[25/Apr/2020 14:26:35] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_23.02.33.png HTTP/1.1" 200 821591
+[25/Apr/2020 14:26:35] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.59.43.png HTTP/1.1" 200 1257894
+[25/Apr/2020 14:26:35] INFO [django.server:157] "GET /media//cusine/banhmi.jpg HTTP/1.1" 200 1349436
+[25/Apr/2020 14:26:35] INFO [django.server:157] "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[25/Apr/2020 14:26:35] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-14_at_21.51.41.png HTTP/1.1" 200 547772
+[25/Apr/2020 14:26:35] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.58.24.png HTTP/1.1" 200 2304363
+[25/Apr/2020 14:26:35] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-20_at_22.07.34.png HTTP/1.1" 200 650373
+[25/Apr/2020 14:26:35] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_23.39.54.png HTTP/1.1" 200 889091
+[25/Apr/2020 14:26:36] INFO [django.server:157] "GET /static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 200 882
+[25/Apr/2020 14:26:47] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:26:47] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1684
+[25/Apr/2020 14:27:08] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:27:08] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1704
+[25/Apr/2020 14:28:36] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:28:36] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1727
+[25/Apr/2020 14:29:54] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:29:54] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1727
+[25/Apr/2020 14:30:31] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:30:32] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1724
+[25/Apr/2020 14:36:03] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:36:03] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1714
+[25/Apr/2020 14:38:01] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:38:01] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1767
+[25/Apr/2020 14:38:27] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:38:27] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1768
+[25/Apr/2020 14:38:34] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 14:38:34] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:38:34] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:38:35] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:38:45] INFO [django.server:157] "GET /recipes/2/ HTTP/1.1" 200 13723
+[25/Apr/2020 14:38:45] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 14:38:45] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:38:45] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:38:45] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:38:48] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:38:48] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:38:48] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:39:21] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:39:21] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1785
+[25/Apr/2020 14:39:21] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:39:21] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:39:21] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:39:51] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:39:51] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1795
+[25/Apr/2020 14:39:51] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:39:51] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:39:51] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:40:32] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:40:32] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1815
+[25/Apr/2020 14:40:32] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:40:32] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:40:32] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:40:58] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:40:59] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1797
+[25/Apr/2020 14:40:59] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:40:59] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:40:59] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:41:20] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:41:20] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1815
+[25/Apr/2020 14:41:20] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:41:20] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:41:20] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:41:53] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[25/Apr/2020 14:41:53] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1815
+[25/Apr/2020 14:41:53] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:41:53] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:41:53] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:42:14] INFO [django.server:157] "GET /recipes/8/ HTTP/1.1" 200 14083
+[25/Apr/2020 14:42:14] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[25/Apr/2020 14:42:14] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:42:14] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:42:14] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[25/Apr/2020 14:42:17] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[25/Apr/2020 14:42:17] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[25/Apr/2020 14:42:17] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[02/May/2020 12:22:36] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[02/May/2020 12:22:40] INFO [django.server:157] "GET /recipes/favorite/ HTTP/1.1" 200 18563
+[02/May/2020 12:22:40] INFO [django.server:157] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[02/May/2020 12:22:40] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 304 0
+[02/May/2020 12:22:40] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.58.24.png HTTP/1.1" 304 0
+[02/May/2020 12:22:40] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.59.43.png HTTP/1.1" 304 0
+[02/May/2020 12:22:40] INFO [django.server:157] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[02/May/2020 12:22:40] INFO [django.server:157] "GET /static/js/popper.min.js HTTP/1.1" 304 0
+[02/May/2020 12:22:40] INFO [django.server:157] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[02/May/2020 12:22:40] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 304 0
+[02/May/2020 12:22:40] INFO [django.server:157] "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[02/May/2020 12:22:40] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_23.32.44.png HTTP/1.1" 304 0
+[02/May/2020 12:22:40] INFO [django.server:157] "GET /static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 304 0
+[02/May/2020 12:22:40] INFO [django.server:157] "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[02/May/2020 12:22:41] INFO [django.server:157] "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[02/May/2020 12:22:41] INFO [django.server:157] "GET /static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 304 0
+[02/May/2020 12:22:45] INFO [django.server:157] "GET /recipes/filter_by_user/ HTTP/1.1" 200 14867
+[02/May/2020 12:22:45] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-20_at_22.07.34.png HTTP/1.1" 304 0
+[02/May/2020 12:22:47] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[02/May/2020 12:22:47] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-14_at_21.51.41.png HTTP/1.1" 304 0
+[02/May/2020 12:22:47] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_22.28.08.png HTTP/1.1" 304 0
+[02/May/2020 12:22:47] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_23.39.54.png HTTP/1.1" 304 0
+[02/May/2020 12:22:47] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_23.02.33.png HTTP/1.1" 304 0
+[02/May/2020 12:22:47] INFO [django.server:157] "GET /media//cusine/banhmi.jpg HTTP/1.1" 304 0
+[02/May/2020 12:22:55] INFO [django.server:157] "GET /donation/ HTTP/1.1" 200 13267
+[02/May/2020 12:22:57] INFO [django.server:157] "GET /donation/update_chart HTTP/1.1" 200 55
+[02/May/2020 12:23:25] INFO [django.server:157] "GET /recipes/ HTTP/1.1" 200 28056
+[02/May/2020 12:23:43] INFO [django.server:157] "GET /recipes/1/ HTTP/1.1" 200 13547
+[02/May/2020 12:24:28] INFO [django.server:157] "GET / HTTP/1.1" 200 28046
+[02/May/2020 12:24:35] INFO [django.server:157] "GET /?q=banh+cuon HTTP/1.1" 200 28046
+[02/May/2020 12:24:42] INFO [django.server:157] "GET /?q=bun HTTP/1.1" 200 28046
+[02/May/2020 12:24:51] INFO [django.server:157] "GET /?q=bun+ HTTP/1.1" 200 28046
+[02/May/2020 12:24:57] INFO [django.server:157] "GET /?q=noodle HTTP/1.1" 200 28046
+[02/May/2020 12:25:04] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[02/May/2020 12:25:04] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[02/May/2020 12:25:04] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[02/May/2020 12:25:11] INFO [django.server:157] "GET /?q=pho HTTP/1.1" 200 28046
+[02/May/2020 12:25:12] WARNING [django.server:157] "GET /static/js/bootstrap.min.js.map HTTP/1.1" 404 1695
+[02/May/2020 12:25:12] WARNING [django.server:157] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1701
+[02/May/2020 12:25:12] WARNING [django.server:157] "GET /static/js/popper.min.js.map HTTP/1.1" 404 1686
+[02/May/2020 12:26:25] INFO [django.server:157] "GET /?q=pork HTTP/1.1" 200 28046
+[02/May/2020 12:26:41] INFO [django.server:157] "GET /?q=banh+mi HTTP/1.1" 200 28046
+[02/May/2020 12:28:25] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[02/May/2020 12:28:26] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[02/May/2020 12:28:31] INFO [django.server:157] "GET /?q=banh+mi HTTP/1.1" 200 28046
+[02/May/2020 12:29:06] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[02/May/2020 12:29:23] INFO [django.server:157] "GET / HTTP/1.1" 200 11262
+[02/May/2020 12:29:23] INFO [django.server:157] "GET /static/css/app.css HTTP/1.1" 200 1815
+[02/May/2020 12:29:23] INFO [django.server:157] "GET /static/js/popper.min.js HTTP/1.1" 200 19033
+[02/May/2020 12:29:23] INFO [django.server:157] "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 14984
+[02/May/2020 12:29:23] INFO [django.server:157] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 60010
+[02/May/2020 12:29:23] INFO [django.server:157] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[02/May/2020 12:29:23] INFO [django.server:157] "GET /static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 200 404
+[02/May/2020 12:29:23] INFO [django.server:157] "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 12791
+[02/May/2020 12:29:23] INFO [django.server:157] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 144877
+[02/May/2020 12:29:23] INFO [django.server:157] "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 41
+[02/May/2020 12:29:26] INFO [django.server:157] "GET /static/debug_toolbar/img/djdt_vertical.png HTTP/1.1" 200 882
+[02/May/2020 12:29:28] INFO [django.server:157] "GET /login/ HTTP/1.1" 200 11774
+[02/May/2020 12:29:28] INFO [django.server:157] "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
+[02/May/2020 12:29:28] INFO [django.server:157] "GET /static/css/accounts.css HTTP/1.1" 200 200
+[02/May/2020 12:29:28] INFO [django.server:157] "GET /static/js/app.js HTTP/1.1" 200 4570
+[02/May/2020 12:29:28] INFO [django.server:157] "GET /static/img/webb.png HTTP/1.1" 200 12240
+[02/May/2020 12:29:32] INFO [django.server:157] "POST /login/ HTTP/1.1" 302 0
+[02/May/2020 12:29:33] INFO [django.server:157] "GET / HTTP/1.1" 200 28046
+[02/May/2020 12:29:33] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_23.32.44.png HTTP/1.1" 200 777361
+[02/May/2020 12:29:33] INFO [django.server:157] "GET /media//cusine/banhmi.jpg HTTP/1.1" 200 1349436
+[02/May/2020 12:29:33] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_23.02.33.png HTTP/1.1" 200 821591
+[02/May/2020 12:29:33] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_22.28.08.png HTTP/1.1" 200 1058745
+[02/May/2020 12:29:33] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.59.43.png HTTP/1.1" 200 1257894
+[02/May/2020 12:29:33] INFO [django.server:157] "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[02/May/2020 12:29:33] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-14_at_21.51.41.png HTTP/1.1" 200 547772
+[02/May/2020 12:29:33] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-20_at_22.07.34.png HTTP/1.1" 200 650373
+[02/May/2020 12:29:33] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-11_at_23.39.54.png HTTP/1.1" 200 889091
+[02/May/2020 12:29:33] INFO [django.server:157] "GET /media//cusine/Screen_Shot_2020-03-08_at_22.58.24.png HTTP/1.1" 200 2304363
+[02/May/2020 12:29:39] INFO [django.server:157] "GET /?q=banh+mi HTTP/1.1" 200 28046
+[02/May/2020 12:30:15] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[02/May/2020 12:30:15] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[02/May/2020 12:30:21] INFO [django.server:157] "GET /?q=banh+mi HTTP/1.1" 200 28047
+[02/May/2020 12:30:33] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[02/May/2020 12:30:33] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[02/May/2020 12:30:35] INFO [django.server:157] "GET /?q=banh+mi HTTP/1.1" 200 28046
+[02/May/2020 12:30:42] INFO [django.server:157] "GET /?q=bun HTTP/1.1" 200 28046
+[02/May/2020 12:31:20] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[02/May/2020 12:31:21] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[02/May/2020 12:33:11] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[02/May/2020 12:33:11] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[02/May/2020 12:33:14] INFO [django.server:157] "GET /recipes/1/ HTTP/1.1" 200 13547
+[02/May/2020 12:33:23] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[02/May/2020 12:33:24] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[02/May/2020 12:33:37] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.
+[02/May/2020 12:33:38] INFO [django.utils.autoreload:598] Watching for file changes with StatReloader
+[02/May/2020 12:33:41] INFO [django.server:157] "GET / HTTP/1.1" 200 28046
+[02/May/2020 12:33:46] INFO [django.server:157] "GET / HTTP/1.1" 200 28046
+[02/May/2020 12:33:56] INFO [django.utils.autoreload:222] /Users/jishin/Documents/Project/BetoajRecipe/project/recipes/views.py changed, reloading.

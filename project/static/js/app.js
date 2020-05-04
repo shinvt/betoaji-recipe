@@ -1,5 +1,5 @@
 // -----------------Like Button----------------------
-var btnClassClick = function(e){
+var likeBtnClick = function(e){
     var recipeID = e.currentTarget.id.split("_")[1];
     $.ajax({
         url: '/recipes/'+recipeID+'/like/',
@@ -20,7 +20,7 @@ var btnClassClick = function(e){
     });
 }
 
-$('.like-icon').on('click', btnClassClick);
+$('.like-icon').on('click', likeBtnClick);
 
 // -----------------Donation----------------------
 // Create a Stripe client.
@@ -90,7 +90,7 @@ function stripeTokenHandler(token) {
   hiddenInput.setAttribute('value', token.id);
   form.appendChild(hiddenInput);
 
-  // Submit the form
+// Submit the form
   form.submit();
 }
 
@@ -151,3 +151,11 @@ var $donationChart = $("#donation-chart");
 
         }
     });
+
+
+// -----------------Search----------------------
+var btnSearchClick = function(e){
+  $('#search-form').submit();
+};
+
+$('#search-btn').on('click',btnSearchClick);
